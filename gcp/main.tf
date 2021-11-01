@@ -33,9 +33,8 @@ module "cloudsql" {
 }
 
 module "gcs_buckets" {
-  source  = "./modules/bucket"
+  source  = "./modules/gcs_buckets"
   project_id  = var.project_id
-  prefix = "de-bootcamp"
   set_admin_roles = true
   admins = ["airflow-capstone@de-capstone-ir.iam.gserviceaccount.com"]
   versioning = {
