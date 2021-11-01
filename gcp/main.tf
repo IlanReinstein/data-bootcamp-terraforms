@@ -32,7 +32,13 @@ module "cloudsql" {
   db_password       = var.db_password
 }
 
-module "bucket" {
+module "gcs_buckets" {
   source  = "./modules/bucket"
-  name = var.bucket_name
+  project_id  = var.project_id
+  prefix = "de-bootcamp"
+  set_admin_roles = true
+  admins = ["airflow-capstone@de-capstone-ir.iam.gserviceaccount.com"]
+  versioning = {
+    first = true
+  }
 }
