@@ -1,5 +1,5 @@
 locals {
-  bucket_name = "${var.bucket_name}-${local.project_id}"
+  bucket_name = var.bucket_name
   location    = var.region
   project_id  = var.project_id
 }
