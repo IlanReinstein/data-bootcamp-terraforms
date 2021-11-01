@@ -23,6 +23,6 @@ output "kubernetes_cluster_host" {
   description = "GKE Cluster Host"
 }
 output "storage_bucket_id" {
-  value = module.bucket.storage_bucket_id
+  value = module.gcs_bucket.storage_bucket_id
   description = "GCS Bucket ID"
 }
