@@ -34,5 +34,4 @@ module "cloudsql" {
 
 module "bucket" {
   source  = "./modules/bucket"
-  name          = var.bucket_name
 }
