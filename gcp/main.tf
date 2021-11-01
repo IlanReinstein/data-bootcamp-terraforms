@@ -34,7 +34,5 @@ module "cloudsql" {
 
 module "bucket" {
   source  = "./modules/bucket"
-  project_id    = var.project_id
-  region        = var.region
   name          = var.bucket_name
 }
