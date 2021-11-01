@@ -35,5 +35,6 @@ module "cloudsql" {
 module "gcs_buckets" {
   source  = "./modules/gcs_buckets"
   project_id  = var.project_id
-  set_admin_roles = true
+  region = var.region
+  name = var.bucket_name
 }
