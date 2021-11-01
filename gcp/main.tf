@@ -2,7 +2,7 @@ module "vpc" {
   source = "./modules/vpc"
 
   project_id  = var.project_id
-  
+
 }
 
 module "gke" {
@@ -30,4 +30,11 @@ module "cloudsql" {
   database_name     = var.database_name
   db_username       = var.db_username
   db_password       = var.db_password
+}
+
+module "bucket" {
+  source  = "./modules/bucket"
+  project_id    = var.project_id
+  region        = var.region
+  name          = var.bucket_name
 }
