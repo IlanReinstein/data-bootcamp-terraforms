@@ -23,7 +23,7 @@ resource "google_service_account_key" "sa_key" {
 
 // IAM Bindings
 resource "google_storage_bucket_iam_binding" "bucket_creator" {
-  bucket = "${google_storage_bucket.capstone_bucket.name}"
+  bucket = "${google_storage_bucket.capstone-bucket.name}"
   role = "roles/storage.objectCreator"
   members = [
     join(":", ["serviceAccount", google_service_account.storage_reader_writer.email])
@@ -31,7 +31,7 @@ resource "google_storage_bucket_iam_binding" "bucket_creator" {
 }
 
 resource "google_storage_bucket_iam_binding" "bucket_reader" {
-  bucket = "${google_storage_bucket.capstone_bucket.name}"
+  bucket = "${google_storage_bucket.capstone-bucket.name}"
   role = "roles/storage.objectViewer"
   members = [
     join(":", ["serviceAccount", google_service_account.storage_reader_writer.email])
