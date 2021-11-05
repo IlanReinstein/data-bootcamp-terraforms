@@ -10,3 +10,11 @@ resource "google_storage_bucket" "capstone-bucket" {
   project       = local.project_id
   force_destroy  = true
 }
+
+// Service Account
+resource "google_service_account" "airflow" {
+  account_id = "airflow"
+  project_id = local.project_id
+  region = local.region_id
+  display_name = "Bucket reader writer"
+}
