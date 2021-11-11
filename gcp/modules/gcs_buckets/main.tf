@@ -14,8 +14,7 @@ resource "google_storage_bucket" "rugged_buckets" {
   region        = "us-central1"
   force_destroy = true
 }
-
-
+s
 // Service Account
 resource "google_service_account" "airflow" {
   account_id = "airflow"
@@ -27,10 +26,4 @@ resource "google_service_account" "airflow" {
 // Service Account Key
 resource "google_service_account_key" "sa_key" {
   service_account_id = google_service_account.airflow.name
-}
-
-// Dataproc Cluster
-resource "google_dataproc_cluster" "capstone-cluster" {
-  name   = var.cluster_name
-  region = local.region_id
 }

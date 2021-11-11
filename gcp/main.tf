@@ -34,7 +34,13 @@ module "cloudsql" {
 
 module "gcs_buckets" {
   source  = "./modules/gcs_buckets"
-  bucket_name = var.bucket_name
+  project_id  = var.project_id
+  region = var.region
+}
+
+module "dataproc" {
+  source = "./modules/dataproc"
+  cluster_name = var.cluster_name
   project_id  = var.project_id
   region = var.region
 }
