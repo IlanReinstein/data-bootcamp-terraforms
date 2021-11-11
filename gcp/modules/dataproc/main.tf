@@ -1,7 +1,7 @@
 // Dataproc Cluster
 
 resource "google_dataproc_cluster" "capstone-cluster" {
-  name     = var.dataproc_name
+  name     = "capstone-cluster"
   region   = "us-central1"
   graceful_decommission_timeout = "120s"
   labels = {

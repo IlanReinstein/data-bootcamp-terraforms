@@ -55,7 +55,3 @@ variable "db_password" {
   description = "Password credentials for root user"
   default     = "dbpassword"
 }
-
-variable "dataproc_name" {
-  description = "The name of the Google Cloud Dataproc Cluster."
-}
