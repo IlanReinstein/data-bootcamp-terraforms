@@ -24,4 +24,3 @@ variable "machine_type" {
   type = string
   default = "n1-standard-1"
 }
-

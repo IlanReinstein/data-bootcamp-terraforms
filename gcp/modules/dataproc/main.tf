@@ -1,11 +1,7 @@
 // Dataproc Cluster
-resource "google_service_account" "default" {
-  account_id   = "capstone-default"
-  display_name = "Service Account"
-}
 
 resource "google_dataproc_cluster" "capstone-cluster" {
-  name     = "capstone-cluster"
+  name     = var.dataproc_name
   region   = "us-central1"
   graceful_decommission_timeout = "120s"
   labels = {

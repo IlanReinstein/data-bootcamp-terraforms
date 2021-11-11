@@ -8,7 +8,7 @@ variable "gcp_bucket_names" {
   default = ["capstone-bucket", "raw", "stage"]
 }
 
-resource "google_storage_bucket" "rugged_buckets" {
+resource "google_storage_bucket" "project-buckets" {
   count         = length(var.gcp_bucket_names)
   name        = var.gcp_bucket_names[count.index]
   force_destroy = true
