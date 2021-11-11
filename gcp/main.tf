@@ -40,7 +40,7 @@ module "gcs_buckets" {
 
 module "dataproc" {
   source = "./modules/dataproc"
-  cluster_name = var.cluster_name
+  dataproc_name = var.dataproc
   project_id  = var.project_id
   region = var.region
 }
