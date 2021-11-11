@@ -5,7 +5,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_dataproc_cluster" "capstone-cluster" {
-  name     = var.cluster_name
+  name     = "capstone-cluster"
   region   = "us-central1"
   graceful_decommission_timeout = "120s"
   labels = {
