@@ -14,6 +14,3 @@ disk_space        = 10
 database_name     = "purchases"
 db_username       = "admin"
 db_password       = "c4p5t0n3"
-
-#GCS
-bucket_name = "capstone-ir"
