@@ -36,7 +36,6 @@ module "gcs_buckets" {
   source  = "./modules/gcs_buckets"
   project_id  = var.project_id
   region = var.region
-  names = ["capstone-bucket", "raw", "stage"]
 }
 
 module "dataproc" {
