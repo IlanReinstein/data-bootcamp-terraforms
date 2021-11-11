@@ -6,6 +6,8 @@ locals {
 variable "gcp_bucket_names" {
   type = list
   default = ["capstone-bucket", "raw", "stage"]
+  project_id = locals.project_id
+  region = locals.region_id
 }
 
 resource "google_storage_bucket" "rugged_buckets" {
