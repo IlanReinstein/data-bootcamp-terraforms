@@ -14,7 +14,7 @@ resource "google_storage_bucket" "rugged_buckets" {
   region        = "us-central1"
   force_destroy = true
 }
-s
+
 // Service Account
 resource "google_service_account" "airflow" {
   account_id = "airflow"
