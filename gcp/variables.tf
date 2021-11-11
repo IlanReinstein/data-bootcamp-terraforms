@@ -56,8 +56,6 @@ variable "db_password" {
   default     = "dbpassword"
 }
 
-# Cloud Storage
-variable "bucket_name" {
-  description = "GCS Bucket name. Value should be unique ."
-  default     = "bucket_name"
+variable "cluster_name" {
+  description = "The name of the Google Cloud Dataproc Cluster."
 }
