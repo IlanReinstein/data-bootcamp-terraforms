@@ -10,8 +10,7 @@ variable "gcp_bucket_names" {
 
 resource "google_storage_bucket" "rugged_buckets" {
   count         = length(var.gcp_bucket_names)
-  bucket        = var.gcp_bucket_names[count.index]
-  region        = "us-central1"
+  name        = var.gcp_bucket_names[count.index]
   force_destroy = true
 }
 
@@ -19,7 +18,6 @@ resource "google_storage_bucket" "rugged_buckets" {
 resource "google_service_account" "airflow" {
   account_id = "airflow"
   project_id = locals.project_id
-  region = locals.region_id
   display_name = "Bucket reader writer"
 }
 
