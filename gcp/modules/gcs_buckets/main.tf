@@ -9,6 +9,7 @@ variable "gcp_bucket_names" {
 }
 
 resource "google_storage_bucket" "project-buckets" {
+  name = var.gcp_bucket_names[count.index]
   count         = length(var.gcp_bucket_names)
   bucket       = var.gcp_bucket_names[count.index]
   force_destroy = true
