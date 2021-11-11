@@ -45,7 +45,7 @@ resource "google_dataproc_cluster" "capstone-cluster" {
     gce_cluster_config {
       tags = ["foo", "bar"]
       # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-      service_account = google_service_account.capstone-default.email
+      service_account = google_service_account.default.email
       service_account_scopes = [
         "cloud-platform"
       ]
