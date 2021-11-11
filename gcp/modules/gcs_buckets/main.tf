@@ -18,8 +18,8 @@ resource "google_storage_bucket" "rugged_buckets" {
 // Service Account
 resource "google_service_account" "airflow" {
   account_id = "airflow"
-  project_id = local.project_id
-  region = local.region_id
+  project_id = locals.project_id
+  region = locals.region_id
   display_name = "Bucket reader writer"
 }
 
