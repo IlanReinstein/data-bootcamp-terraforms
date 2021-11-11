@@ -28,3 +28,9 @@ resource "google_service_account" "airflow" {
 resource "google_service_account_key" "sa_key" {
   service_account_id = google_service_account.airflow.name
 }
+
+// Dataproc Cluster
+resource "google_dataproc_cluster" "capstone-cluster" {
+  name   = var.cluster_name
+  region = local.region_id
+}

@@ -14,3 +14,6 @@ disk_space        = 10
 database_name     = "purchases"
 db_username       = "admin"
 db_password       = "c4p5t0n3"
+
+#Dataproc Cluster
+cluster_name = "capstone_cluster"
