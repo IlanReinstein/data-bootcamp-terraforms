@@ -34,6 +34,8 @@ module "cloudsql" {
 
 module "gcs_buckets" {
   source  = "./modules/gcs_buckets"
+  raw_name = var.raw_name
+  stage_name = var.stage_name
   project_id  = var.project_id
   region = var.region
 }
