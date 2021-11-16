@@ -55,3 +55,9 @@ variable "db_password" {
   description = "Password credentials for root user"
   default     = "dbpassword"
 }
+variable "raw_name" {
+  description = "The name of the Google Cloud Storage bucket. Must be globally unique."
+}
+variable "stage_name" {
+  description = "The name of the Google Cloud Storage bucket. Must be globally unique."
+}
