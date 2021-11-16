@@ -12,7 +12,7 @@ database_version  = "POSTGRES_12"
 instance_tier     = "db-f1-micro"
 disk_space        = 10
 database_name     = "purchases"
-db_username       = "admin"
+db_username       = "admin-1"
 db_password       = "c4p5t0n3"
 
 #Dataproc Cluster
