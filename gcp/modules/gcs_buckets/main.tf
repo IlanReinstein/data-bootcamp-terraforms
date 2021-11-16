@@ -1,17 +1,22 @@
 locals {
-  region_id   = var.region
+  raw_name = var.bucket_name
+  stage_name = var.stage_name
+  location    = var.region
   project_id  = var.project_id
 }
 
-variable "gcp_bucket_names" {
-  type = list(string)
-  default = ["capstone-bucket", "raw", "stage"]
+resource "google_storage_bucket" "raw" {
+  name          = local.raw_name
+  location      = local.location
+  project       = local.project_id
+  force_destroy  = true
 }
 
-resource "google_storage_bucket" "project-buckets" {
-  name = var.gcp_bucket_names[count.index]
-  count         = length(var.gcp_bucket_names)
-  force_destroy = true
+resource "google_storage_bucket" "stage" {
+  name          = local.stage_name
+  location      = local.location
+  project       = local.project_id
+  force_destroy  = true
 }
 
 // Service Account
