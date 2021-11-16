@@ -5,14 +5,14 @@ locals {
   project_id  = var.project_id
 }
 
-resource "google_storage_bucket" "raw" {
+resource "google_storage_bucket" "raw-bucket" {
   name          = local.raw_name
   location      = local.location
   project       = local.project_id
   force_destroy  = true
 }
 
-resource "google_storage_bucket" "stage" {
+resource "google_storage_bucket" "stage-bucket" {
   name          = local.stage_name
   location      = local.location
   project       = local.project_id
