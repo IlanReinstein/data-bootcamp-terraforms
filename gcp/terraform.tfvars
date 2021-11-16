@@ -7,7 +7,7 @@ gke_num_nodes = 2
 machine_type  = "n1-standard-1"
 
 #CloudSQL
-instance_name     = "dbcapstone"
+instance_name     = "dbcapstone-1"
 database_version  = "POSTGRES_12"
 instance_tier     = "db-f1-micro"
 disk_space        = 10
