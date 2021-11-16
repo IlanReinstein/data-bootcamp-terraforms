@@ -1,5 +1,5 @@
 locals {
-  raw_name = var.bucket_name
+  raw_name = var.raw_name
   stage_name = var.stage_name
   location    = var.region
   project_id  = var.project_id
