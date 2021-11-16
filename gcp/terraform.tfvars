@@ -19,4 +19,4 @@ db_password       = "c4p5t0n3"
 #cluster_name = "capstone_cluster"
 #GCS
 raw_name = "raw-data"
-stage_name = "stage-name"
+stage_name = "stage-data"
