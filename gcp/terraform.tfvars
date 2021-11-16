@@ -16,4 +16,4 @@ db_username       = "admin"
 db_password       = "c4p5t0n3"
 
 #Dataproc Cluster
-cluster_name = "capstone_cluster"
+#cluster_name = "capstone_cluster"

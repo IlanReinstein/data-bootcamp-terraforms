@@ -38,8 +38,8 @@ module "gcs_buckets" {
   region = var.region
 }
 
-module "dataproc" {
-  source = "./modules/dataproc"
-  project_id  = var.project_id
-  region = var.region
-}
+#module "dataproc" {
+#  source = "./modules/dataproc"
+#  project_id  = var.project_id
+#  region = var.region
+#}
