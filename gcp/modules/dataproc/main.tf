@@ -1,5 +1,8 @@
 // Dataproc Cluster
-
+resource "google_service_account" "dataproc_account" {
+  account_id   = "dataproc-cluster"
+  display_name = "Service Account"
+}
 resource "google_dataproc_cluster" "capstone-cluster" {
   name     = "capstone-cluster"
   region   = "us-central1"
@@ -45,7 +48,7 @@ resource "google_dataproc_cluster" "capstone-cluster" {
     gce_cluster_config {
       tags = ["foo", "bar"]
       # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-      service_account = google_service_account.default.email
+      service_account = google_service_account.dataproc_account.email
       service_account_scopes = [
         "cloud-platform"
       ]
