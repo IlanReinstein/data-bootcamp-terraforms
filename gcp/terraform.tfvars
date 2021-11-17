@@ -16,7 +16,7 @@ db_username       = "admin-1"
 db_password       = "c4p5t0n3"
 
 #Dataproc Cluster
-#cluster_name = "capstone_cluster"
+cluster_name = "capstone_cluster"
 #GCS
 raw_name = "capstone-ir-raw-data"
 stage_name = "capstone-ir-stage-data"
