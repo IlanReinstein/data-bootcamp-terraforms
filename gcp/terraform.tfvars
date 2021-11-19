@@ -1,4 +1,4 @@
-project_id = "de-capstone-ir"
+project_id = "de-bootcamp-ir"
 region     = "us-central1"
 location     = "us-central1-a"
 
