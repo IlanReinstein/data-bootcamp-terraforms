@@ -7,7 +7,7 @@ gke_num_nodes = 2
 machine_type  = "n1-standard-1"
 
 #CloudSQL
-instance_name     = "irdb-capstone-1"
+instance_name     = "ir-wizeline"
 database_version  = "POSTGRES_12"
 instance_tier     = "db-f1-micro"
 disk_space        = 10
@@ -15,8 +15,6 @@ database_name     = "purchases"
 db_username       = "admin-1"
 db_password       = "c4p5t0n3"
 
-#Dataproc Cluster
-#cluster_name = "capstone_cluster"
 #GCS
-raw_name = "capstone-ir-raw-data"
-stage_name = "capstone-ir-stage-data"
+raw_name = "ir-raw-data"
+stage_name = "ir-stage-data"
